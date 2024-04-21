@@ -51,13 +51,13 @@
             <div class="col-md-12 text-center d-flex justify-content-center">
                 <div class="box mx-2">
                     <a href="/register-medecin.php">
-                        <img src="medecin-image.jpg" alt="Medecin">
+                        <img src="photo/medecins-dessin.avif" alt="Medecin">
                         <p>Medecin</p>
                     </a>
                 </div>
                 <div class="box mx-2">
                     <a href="/register-patient.php">
-                        <img src="patient-image.jpg" alt="Patient">
+                        <img src="photo/personne-malade-dessin.jpg" alt="Patient">
                         <p>Patient</p>
                     </a>
                 </div>

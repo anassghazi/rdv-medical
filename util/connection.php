@@ -2,7 +2,7 @@
 $servername = "localhost";  // Nom de l'hôte
 $username = "root";         // Nom d'utilisateur
 $password = "";             // Mot de passe
-$dbname = "cabinet"; // Nom de la base de données
+$dbname = "projet"; // Nom de la base de données
 
 // Créer une connexion
 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -11,5 +11,6 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 } 
+else echo "connection successful";
 
 ?>

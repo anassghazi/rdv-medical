@@ -1,3 +1,7 @@
+<?php
+include("./util/connection.php");
+?>
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -43,7 +47,7 @@
         <div class="container-fluid h-custom">
             <div style="padding-top:40px;" class="row d-flex justify-content-center align-items-center">
             <div class="col-md-9 col-lg-6 col-xl-5">
-                <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.webp"
+                <img src="https://img.freepik.com/photos-premium/docteur-tenant-stethoscope-fond-blanc_41471-6399.jpg?w=740"
                 class="img-fluid" alt="Sample image">
             </div>
             <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
