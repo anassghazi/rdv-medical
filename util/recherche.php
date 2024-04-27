@@ -22,6 +22,8 @@ include("recherche.php");
 
 
 
+
+
 <hI>Search page</hl> 
 <div class="article-container">
 <?php
