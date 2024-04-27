@@ -1,6 +1,4 @@
-<?php
-include("./util/connection.php");
-?>
+
 
 <!DOCTYPE html>
 <html lang="en">
