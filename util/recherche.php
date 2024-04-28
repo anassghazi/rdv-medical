@@ -1,6 +1,5 @@
 <?php
 include("connection.php");
-include("recherche.php");
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -18,19 +17,16 @@ include("recherche.php");
     <a href="http://localhost:9000/login.php" class="btn btn-dark text-white border border-light">Se connecter</a>
   </div>
 </nav>
-
-
-
-
-
-
+7
 <hI>Search page</hl> 
 <div class="article-container">
 <?php
 if(isset($_POST['submit-search'])){
 $search = mysqli_real_escape_string($conn, $_POST[ 'search']);
-$sql="SELECT * FROM medecin WHERE nom  LIKE '%search%' OR prenom LIKE '%search%' OR 
-      specialite LIKE '%search%' OR specialite LIKE '%search%' ";
+$sql="SELECT * FROM medecin WHERE nom  LIKE '%search%' 
+      OR prenom LIKE '%search%' 
+      OR specialite LIKE '%search%' 
+      OR ville LIKE '%search%' ";
 $result=mysqli_query($conn, $sql);
 $queryResu1t=mysqli_num_rows($result);
 echo "there are ".$queryResults."results!";
