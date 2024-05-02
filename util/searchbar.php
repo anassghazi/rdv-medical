@@ -26,10 +26,17 @@
             font-size: 130%;
         }
         .button {
+            background-color: #2F4F4F;
+            color: white;
+            border-width: 1px;
+            border-color: white ;
+        }
+        .button:hover {
             background-color: black;
             color: white;
+            border-width: 1px;
+            border-color: white ;
         }
-        
         
     </style>
 </head>

@@ -2,7 +2,6 @@
 include("connection.php"); 
 include("header.php"); 
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,10 +11,18 @@ include("header.php");
 <style>
     .doc-info{
         height: 120px;
-        background-color: #0c4a6e;
+        background-color: #2F4F4F;
         text-align: center;
         color: white;
     }
+    .doc-info2{
+        height: 1200px;
+        background-color: #ebf6f9;
+        color: white;
+    }
+    
+    
+    
 </style>
 </head>
 <body>
@@ -33,7 +40,7 @@ if(isset($_GET['id_medecin'])) {
     $result = mysqli_stmt_get_result($stmt);
 
     if($row = mysqli_fetch_assoc($result)) {
-   
+        echo "<br>";
         echo "<p>Dr  " . $row['nom'] . " " . $row['prenom'] . "</p>";
         echo "<p>Specialité: " . $row['specialite'] . "</p>";
         echo "<p>Ville: " . $row['ville'] . "</p>";
@@ -44,7 +51,16 @@ if(isset($_GET['id_medecin'])) {
 } else {
     echo "<p>No doctor ID provided.</p>";
 }
+
 ?>
 </div>
-</body>
+</div>
+
+<div class="doc-info2">
+   <div class="doc-info3">
+  
+   </div>
+</div>
+
+</body>  
 </html>

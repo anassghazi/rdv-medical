@@ -15,24 +15,20 @@
             margin-top: 15px;
             width: 1484px;
             padding-left: 269px;
-            
-            
         }
         .card{
             height: 180px;
             text-align: center;
-            
-        background-color:white ;
+            background-color:white ;
           }
+
       </style>
       <title>Search Medecin</title>
   </head>
-  <body>
-  
- 
-<div>
-<?php
-if (isset($_POST['submit-search'])) {
+  <body> 
+   <div>
+   <?php
+   if (isset($_POST['submit-search'])) {
     $nom = mysqli_real_escape_string($conn, $_POST['search-nom']);
     $specialite = mysqli_real_escape_string($conn, $_POST['search-specialite']);
     $ville = mysqli_real_escape_string($conn, $_POST['search-ville']);
@@ -72,10 +68,10 @@ if (isset($_POST['submit-search'])) {
                     echo "<div class='col-md-4 mb-4'>
                      <div class='card'>
                      <div class='card-body'>
-                     <h5 class='card-title'>".$row['nom']."</h5> 
-                     <h6 class='card-subtitle mb-2 text-muted'>".$row['prenom']."</h6> 
-                     <p class='card-text'>Spécialité: ".$row['specialite']."</p>
-                     <p class='card-text'>Ville: ".$row['ville']."</p>
+                     <h5 class=''>".$row['nom']."</h5> 
+                     <h6 class=''>".$row['prenom']."</h6> 
+                     <p class=''>Spécialité: ".$row['specialite']."</p>
+                     <p class=''>Ville: ".$row['ville']."</p>
                      <a href='http://localhost:9000/util/rendezvous.php?id_medecin=".$row['id']."' class='btn btn-dark text-white border border-light'>RDV</a>
                      </div>
                      </div>     
@@ -92,8 +88,7 @@ if (isset($_POST['submit-search'])) {
 }
 ?>
 </div>
-
   </div>
-
+  
   </body>
   </html>
