@@ -7,26 +7,42 @@ include("header.php");
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"> 
+<script src="https://cdn.tailwindcss.com"></script>
 <title>redezvous</title>
 <style>
     .doc-info{
-        height: 120px;
-        background-color: #2F4F4F;
-        text-align: center;
-        color: white;
-    }
-    .doc-info2{
-        height: 1200px;
-        background-color: #ebf6f9;
-        color: white;
-    }
-    
-    
-    
+    height: 140px;
+    background-color: #2F4F4F;
+    text-align: center;
+    color: white;
+}
+.doc-info2{
+    height: 2100px;
+    background-color: #ccfbf1;
+    padding: 1px;
+    color: white;
+}
+.doc-info3{
+    height: 550px;
+     background-color: white;
+    color: black;
+    border-radius: 20px;
+    margin: 12px;
+    margin-top: 12px;
+    margin-right: 650px;
+}
+.choix{
+        
+    text-align: center;
+
+}
+
 </style>
 </head>
 <body>
     <div class="doc-info">
+        
 <?php
 // Check if the doctor's ID is passed as a query parameter
 if(isset($_GET['id_medecin'])) {
@@ -57,8 +73,19 @@ if(isset($_GET['id_medecin'])) {
 </div>
 
 <div class="doc-info2">
-   <div class="doc-info3">
-  
+<div class="choix">
+<a href="#carte">carte</a>
+<a href="#presentation">presentation</a>
+<a href="#horaires">horaires</a>
+</div>
+   <div class="doc-info3" id="carte">
+    <h1>carte</h1>
+   </div>
+   <div class="doc-info3" id="presentation">
+   <h1>presentation</h1>
+   </div>
+   <div  class="doc-info3" id="horaires">
+   <h1>horaires</h1>
    </div>
 </div>
 
