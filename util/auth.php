@@ -14,7 +14,7 @@ $stmt = $conn->prepare("SELECT id, email, password, role FROM (
                      UNION ALL
                      SELECT id, email, password, role FROM medecin
                                                    ) AS combined_users
-       WHERE email = ? AND password = ?");
+        WHERE email = ? AND password = ?");
 $stmt->bind_param("ss", $email,$password);
 
 // Exécuter la requête
@@ -23,6 +23,7 @@ $stmt->execute();
 // Récupérer le résultat
 $result = $stmt->get_result();
 $user = $result->fetch_assoc();
+
 if ($password===$user['password']) {
 //////////////////////////////////////////
     $_SESSION['id'] = $user['id'];
@@ -59,4 +60,3 @@ if ($password===$user['password']) {
 $stmt->close();
 $conn->close();
 ?>
-
