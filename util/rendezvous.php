@@ -18,7 +18,7 @@ include("header.php");
     color: white;
 }
 .doc-info2{
-    height: 2100px;
+    height: 2800px;
     background-color: #ccfbf1;
     padding: 1px;
     color: white;
@@ -35,6 +35,9 @@ include("header.php");
 .choix{
         
     text-align: center;
+
+}
+.calendrier{
 
 }
 
@@ -87,7 +90,13 @@ if(isset($_GET['id_medecin'])) {
    <div  class="doc-info3" id="horaires">
    <h1>horaires</h1>
    </div>
-</div>
 
+   <div class="calendier">
+    <?php
+    include("calendrier.php");
+    ?>
+   </div>
+
+</div>
 </body>  
 </html>
