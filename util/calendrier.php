@@ -57,13 +57,24 @@ $hours = ['12:00', '12:20', '12:40', '13:00', '13:20', '13:40', '14:00', '14:20'
         .scrollable-hours {
             overflow-y: auto;
             flex-grow: 1;
+            height: 200px;
         }
         .navigation {
             flex: 0 0 40px;
         }
+        .calendrier{
+            margin-top: 20px;
+            margin-left: 380px;
+            background-color: grey;
+            height: 270px;
+            width: 550px;
+            position: fixed;
+            right: 25px;
+        }
     </style>
 </head>
 <body>
+    <div class="calendrier">
     <div class="container">
         <div class="day-column navigation"><a href="?offset=<?php echo $offset - 1; ?>">&lt;</a></div>
         <?php for ($i = 0; $i < 6; $i++): ?>
@@ -81,6 +92,7 @@ $hours = ['12:00', '12:20', '12:40', '13:00', '13:20', '13:40', '14:00', '14:20'
             </div>
         <?php endfor; ?>
         <div class="day-column navigation"></div>
+    </div>
     </div>
 </body>
 </html>

@@ -33,14 +33,12 @@ include("header.php");
     margin-right: 650px;
 }
 .choix{
-        
     text-align: center;
-
+    
 }
-.calendrier{
-
+.calendier{
+   
 }
-
 </style>
 </head>
 <body>
@@ -81,6 +79,9 @@ if(isset($_GET['id_medecin'])) {
 <a href="#presentation">presentation</a>
 <a href="#horaires">horaires</a>
 </div>
+    <?php
+    include("calendrier.php");
+    ?>
    <div class="doc-info3" id="carte">
     <h1>carte</h1>
    </div>
@@ -91,11 +92,8 @@ if(isset($_GET['id_medecin'])) {
    <h1>horaires</h1>
    </div>
 
-   <div class="calendier">
-    <?php
-    include("calendrier.php");
-    ?>
-   </div>
+    
+   
 
 </div>
 </body>  
