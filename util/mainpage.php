@@ -1,7 +1,8 @@
 <?php
 include("connection.php");
-include("header.php");
+include("navbar.php");
 include("searchbar.php");
+
 ?>
 <!DOCTYPE html>
 <html lang="en">

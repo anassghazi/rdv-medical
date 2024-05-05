@@ -1,4 +1,8 @@
 <?php
+include("connection.php"); 
+?>
+
+<?php
 // Essayez différentes locales si 'fr_FR.utf8' ne fonctionne pas
 $locales = ['fr_FR.utf8', 'fr_FR', 'fr_FR@euro', 'french'];
 foreach ($locales as $locale) {
@@ -86,9 +90,13 @@ $hours = ['12:00', '12:20', '12:40', '13:00', '13:20', '13:40', '14:00', '14:20'
         <div class="day-column navigation"></div>
         <?php for ($i = 0; $i < 6; $i++): ?>
             <div class="day-column">
-                <?php foreach ($hours as $hour): ?>
-                    <button class="hour-button"><?php echo formatHour($hour); ?></button>
-                <?php endforeach; ?>
+              <?php foreach ($hours as $hour): ?>
+                <?php $day = strtotime("+$i days", $base_time); ?>
+                <a href="confirmer.php?date=<?php echo urlencode(strftime('%Y-%m-%d', $day)); ?>&hour=<?php echo urlencode($hour); ?>" style="text-decoration: none;">
+                <button class="hour-button"><?php echo formatHour($hour); ?></button>
+                </a>
+         <?php endforeach; ?>
+
             </div>
         <?php endfor; ?>
         <div class="day-column navigation"></div>

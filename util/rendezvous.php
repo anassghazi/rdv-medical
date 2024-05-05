@@ -1,6 +1,6 @@
 <?php
 include("connection.php"); 
-include("header.php"); 
+include("navbar.php"); 
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -36,9 +36,7 @@ include("header.php");
     text-align: center;
     
 }
-.calendier{
-   
-}
+
 </style>
 </head>
 <body>
@@ -79,9 +77,11 @@ if(isset($_GET['id_medecin'])) {
 <a href="#presentation">presentation</a>
 <a href="#horaires">horaires</a>
 </div>
+     
     <?php
     include("calendrier.php");
     ?>
+
    <div class="doc-info3" id="carte">
     <h1>carte</h1>
    </div>
