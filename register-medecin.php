@@ -20,9 +20,6 @@ else
      echo"<script>alert('data not inserted ')</script>";
 }
 
-
-
-
 ?>
 
 <head>

@@ -78,6 +78,7 @@ $hours = ['12:00', '12:20', '12:40', '13:00', '13:20', '13:40', '14:00', '14:20'
     </style>
 </head>
 <body>
+    
     <div class="calendrier">
     <div class="container">
         <div class="day-column navigation"><a href="?offset=<?php echo $offset - 1; ?>">&lt;</a></div>
