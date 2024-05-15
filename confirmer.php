@@ -2,7 +2,15 @@
 <?php 
 include("util/connection.php"); 
 include("util/navbar.php");
-
+/*
+session_start();
+if(isset($_SESSION['user_id'])) {
+    // L'utilisateur est connecté
+} else {
+    // L'utilisateur n'est pas connecté, redirigez-le vers la page de connexion
+    header("Location: login.php");
+    exit;
+}*/
 $id_medecin = isset($_GET['id_medecin']) ? $_GET['id_medecin'] : 'inconnu';
 
 ?>
@@ -86,6 +94,7 @@ $id_medecin = isset($_GET['id_medecin']) ? $_GET['id_medecin'] : 'inconnu';
         echo "<p> " . $row['specialite'] . "</p>";
         echo "<p> " . $row['ville'] . "</p>";
         echo "<img src='" . $row['image'] . "' alt='Doctor Image' class='doctor-image'>";
+        echo " <p> " . $row['localisation'] . "</p>";
         ?>
         </div>
        <?php
@@ -99,19 +108,8 @@ $id_medecin = isset($_GET['id_medecin']) ? $_GET['id_medecin'] : 'inconnu';
     <div class="confirmation">
         <h2>confirmez l'heure du rendz-vous</h2>
         <p>Vous avez sélectionné le <?php echo $formattedDate; ?> à <?php echo $formattedHour; ?>.</p>
-        <button class="continuer" onclick="continuer();">continuer</button>
+        <button class="continuer"  onclick="window.location.href = 'verification.php';">continuer</button>
     </div>
-    <script>
-        function continuer() {
-            <?php
-                if(isset($_SESSION['user_id'])) {
-                    echo 'window.location="finalisation.php";';  
-                } else {
-                    echo 'window.location="login.php";'; 
-                }
-            ?>
-        }
-    </script>
-
+  
 </body>
 </html>

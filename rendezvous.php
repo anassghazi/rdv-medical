@@ -1,6 +1,7 @@
 <?php
 include("util/connection.php"); 
 include("util/navbar.php"); 
+$id_patient = isset($_GET['id_patient']) ? $_GET['id_patient'] : 'inconnu';
 ?>
 
 
@@ -46,6 +47,7 @@ include("util/navbar.php");
 </style>
 </head>
 <body>
+    
     <div class="doc-info">
         
 <?php
@@ -82,7 +84,7 @@ if(isset($_GET['id_medecin'])) {
 <div class="doc-info2">
 
       
-    <?php
+    <?php 
     include("util/calendrier.php");
     ?>
 

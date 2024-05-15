@@ -1,3 +1,6 @@
+<?php
+include("util/navbar.php"); 
+?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -117,44 +120,44 @@
 
     <script src="/js/jquery.min.js"></script>
     <script>
-            $(document).ready(function(){
-                $("#loginForm").submit(function(event){
-                    event.preventDefault();
-                    
-                    $("#loginBtn").attr("disabled", true);
-                    $("#loading").removeClass("d-none");
-                    $("#errorMsg").addClass("d-none");
+          $(document).ready(function(){
+    $("#loginForm").submit(function(event){
+        event.preventDefault();
+        
+        $("#loginBtn").attr("disabled", true);
+        $("#loading").removeClass("d-none");
+        $("#errorMsg").addClass("d-none");
 
-                    var email = $("#email").val();
-                    var password = $("#password").val();
+        var email = $("#email").val();
+        var password = $("#password").val();
 
-                    $.ajax({
-                        url: "/util/auth.php",
-                        method: "POST",
-                        data: {email: email, password: password},
-                        dataType: 'json',
-                        success: function(response){
-                            console.log(response);
-                            if(response.success){
-                                window.location.href = '/'+response.role+"/dashboard.php";
-                            } else {
-                                $("#errorMsg").removeClass("d-none");
-                                $("#loginBtn").attr("disabled", false);
-                                $("#loading").addClass("d-none");
-                            }
-                        }, 
-                        error: function(jqXHR, textStatus, errorThrown) {
-                            // Afficher une erreur générique si la requête échoue
-                            console.log(textStatus);
-                            console.log('Une erreur s\'est produite : ' + textStatus + ', ' + errorThrown);
-                            $("#errorMsg").removeClass("d-none");
-                            $("#loginBtn").attr("disabled", false);
-                            $("#loading").addClass("d-none");
-                        },
-
-                    });
-                });
-            });
+        $.ajax({
+            url: "/util/auth.php",
+            method: "POST",
+            data: {email: email, password: password},
+            dataType: 'json',
+            success: function(response){
+                console.log(response);
+                if(response.success){
+                    // Rediriger vers la page précédente
+                    window.location.href = document.referrer + "?patient_id=" + response.id;
+                } else {
+                    $("#errorMsg").removeClass("d-none");
+                    $("#loginBtn").attr("disabled", false);
+                    $("#loading").addClass("d-none");
+                }
+            }, 
+            error: function(jqXHR, textStatus, errorThrown) {
+                // Afficher une erreur générique si la requête échoue
+                console.log(textStatus);
+                console.log('Une erreur s\'est produite : ' + textStatus + ', ' + errorThrown);
+                $("#errorMsg").removeClass("d-none");
+                $("#loginBtn").attr("disabled", false);
+                $("#loading").addClass("d-none");
+            }
+        });
+    });
+})
     </script>
 
     </body>

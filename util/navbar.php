@@ -11,8 +11,8 @@
 <body>
 <nav class="navbar navbar-light bg-cover bg-cyan-950">
     <div class="container-fluid">
-        <a class="navbar-brand text-white" href="http://localhost:9000/util/mainpage.php">LOGO</a>
-        <a href="http://localhost:9000/login.php" class="btn btn-dark text-white border border-light">Se connecter</a>
+        <a class="navbar-brand text-white" href="home.php">LOGO</a>
+        <a href="login.php" class="btn btn-dark text-white border border-light">Se connecter</a>
     </div>
 </nav>
 </body>

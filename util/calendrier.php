@@ -3,6 +3,7 @@ include("connection.php");
 
 $doctorId = isset($_GET['id_medecin']) ? $_GET['id_medecin'] : null;
 
+
 // Vérifier si un ID de médecin a été fourni
 if ($doctorId !== null) {
     // Requête pour sélectionner les créneaux du médecin spécifié
